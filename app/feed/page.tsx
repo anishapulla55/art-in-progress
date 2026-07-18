@@ -20,11 +20,15 @@ export default function FeedPage() {
   // Authentication check
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (!user) {
-        router.push("/login");
-      } else {
-        setLoading(false);
-      }
+        console.log("Auth user:", user);
+
+        if (!user) {
+          console.log("No user found");
+          router.push("/login");
+        } else {
+          console.log("User found");
+          setLoading(false);
+        }
     });
 
     return () => unsubscribe();
@@ -53,7 +57,13 @@ export default function FeedPage() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        Loading...
+        <br />
+        Checking authentication...
+      </div>
+    );
   }
 
 return (
