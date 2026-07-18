@@ -67,17 +67,31 @@ export default function CreatePostPage() {
         </label>
 
         <input
-          type="file"
-          accept="image/*"
-          onChange={(e) =>
+            type="file"
+            accept="image/*"
+            onChange={(e) =>
             setImage(
-              e.target.files
-                ? e.target.files[0]
+                e.target.files
+                    ? e.target.files[0]
                 : null
             )
-          }
-          className="mb-8"
-        />
+        }
+        className="
+            w-full
+            border
+            border-[#8b6b3f]
+            rounded-lg
+            p-4
+            bg-[#0f0c08]
+            mb-8
+        "
+    />
+
+    {image && (
+        <p className="text-sm text-[#b99760] mt-2">
+        Selected: {image.name}
+        </p>
+    )}
 
         <label className="block text-xl mb-3">
             Title
@@ -87,7 +101,7 @@ export default function CreatePostPage() {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder="Name your artwork"
+            placeholder="Name your artwork and the artist name"
             className="w-full bg-transparent border border-[#8b6b3f] rounded-lg p-4 mb-8 text-white"
         />
 

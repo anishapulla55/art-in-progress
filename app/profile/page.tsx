@@ -89,7 +89,7 @@ export default function ProfilePage() {
       <div className="max-w-5xl mx-auto px-8 py-16">
 
         <h1 className="text-6xl font-serif tracking-[0.15em] mb-8">
-          MY PROFILE
+          My Profile
         </h1>
 
         <div className="flex justify-end">
@@ -100,7 +100,7 @@ export default function ProfilePage() {
             Logout
             </button>
         </div>
-        
+
         <div className="w-48 h-px bg-[#8b6b3f] mb-10"></div>
 
         {/* Profile Info */}

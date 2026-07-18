@@ -83,7 +83,7 @@ export default function LoginPage() {
             onClick={handleLogin}
             className="w-full bg-[#1f2b35] hover:bg-[#263745] border border-[#8b6b3f] py-4 text-xl tracking-wide transition"
           >
-            ENTER GALLERY
+            Enter Gallery
           </button>
 
           {/* Divider */}
