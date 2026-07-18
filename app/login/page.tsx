@@ -11,14 +11,23 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const handleLogin = async () => {
     try {
-    await signInWithEmailAndPassword(auth, email, password);
-    console.log(auth.currentUser);
-    router.push("/feed");
+      const userCredential =
+        await signInWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
+
+      alert("Login successful!");
+
+      console.log(userCredential.user);
+
+      router.push("/feed");
     } catch (error) {
-    console.error(error);
-    alert("Something went wrong");
+      console.error(error);
+      alert("Login failed");
     }
-};
+  };
   return (
     <div className="min-h-screen bg-[#0f0c08] flex items-center justify-center text-[#d4b483]">
 
