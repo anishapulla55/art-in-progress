@@ -90,7 +90,7 @@ export default function LoginPage() {
           {/* Login Button */}
           <button
             onClick={handleLogin}
-            className="w-full bg-[#1f2b35] hover:bg-[#263745] border border-[#8b6b3f] py-4 text-xl tracking-wide transition"
+            className="relative z-99 w-full  bg-[#1f2b35] hover:bg-[#263745] border border-[#8b6b3f] py-4 text-xl tracking-wide transition"
           >
             Enter Gallery
           </button>

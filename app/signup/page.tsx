@@ -71,7 +71,7 @@ export default function SignupPage() {
 
         <button
           onClick={handleSignup}
-          className="w-full bg-[#4b1f18] hover:bg-[#5e281f] border border-[#8b6b3f] py-4 text-xl tracking-wide transition"
+          className="relative z-99w-full bg-[#4b1f18] hover:bg-[#5e281f] border border-[#8b6b3f] py-4 text-xl tracking-wide transition"
         >
           Create Account
         </button>
