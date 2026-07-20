@@ -10,24 +10,21 @@ export default function LoginPage() {
   const router = useRouter();
   const [password, setPassword] = useState("");
   const handleLogin = async () => {
-    try {
-      const userCredential =
-        await signInWithEmailAndPassword(
-          auth,
-          email,
-          password
-        );
+  try {
+    await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
 
-      alert("Login successful!");
+    console.log(auth.currentUser);
 
-      console.log(userCredential.user);
-
-      router.push("/feed");
-    } catch (error) {
-      console.error(error);
-      alert("Login failed");
-    }
-  };
+    router.push("/feed");
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong");
+  }
+};
   return (
     <div className="min-h-screen bg-[#0f0c08] flex items-center justify-center text-[#d4b483]">
 
